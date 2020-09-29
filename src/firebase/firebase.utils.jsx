@@ -44,7 +44,7 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({'prompt': 'select_account'});
-export const SignInWithGoogle = () => auth.signInWithPopup(provider).catch(function (error) {
+export const SignInWithGoogle = () => auth.signInWithRedirect(provider).catch(function (error) {
     console.log("hello"+error)
     const errorCode= error.code
     console.log(errorCode)
