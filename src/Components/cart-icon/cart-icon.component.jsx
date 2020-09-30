@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import { setHidden } from '../../redux/cart/cart.action';
+import {createStructuredSelector} from "reselect";
 import {selectCartItemsCount} from "../../redux/cart/cart.selectors";
 
 import './cart-icon.styles.scss';
